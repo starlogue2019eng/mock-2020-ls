@@ -9,7 +9,7 @@ var app = new Vue({
   },
   mounted: function () { 
     var cand_num_3 = prompt("考生編號三位尾數"); //ask for login detail
-    // var phone_num = prompt("電話號碼");
+    var phone_num = prompt("電話號碼");
     // var cand_num_3 = "031";
     // var phone_num = 92345678;
 
@@ -22,8 +22,8 @@ var app = new Vue({
     .done(function(data) {
       data = Papa.parse(data, {header: true}).data;
       data.forEach(element => {
-        // if (element.cand_num_3 == cand_num_3 && element.phone_num == phone_num) {
-        if (element.cand_num_3 == cand_num_3) {
+        if (element.cand_num_3 == cand_num_3 && element.phone_num == phone_num) {
+        // if (element.cand_num_3 == cand_num_3) {
           console.log(element);
           self.candidate = element;
         }
