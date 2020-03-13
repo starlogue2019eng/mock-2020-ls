@@ -29,7 +29,7 @@ var app = new Vue({
         }
       });
       // if data does not match login detail, then go to 404
-      // if (data.some(candidate => candidate.cand_num_3 == cand_num_3 && candidate.phone_num == phone_num)) {
+      if (data.some(candidate => candidate.cand_num_3 == cand_num_3 && candidate.phone_num == phone_num)) {
       if (data.some(candidate => candidate.cand_num_3 == cand_num_3)) {
         document.querySelector("body").style.removeProperty("visibility");
         return true;
